@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zobacz moje rolki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Czy chcesz obejrzeć moje rolki?</h1>
+        <div class="options">
+            <button class="option-btn" id="tak">Tak</button>
+            <button class="option-btn" id="nie">Nie</button>
+        </div>
+    </div>
+
+    <div id="gratulacje" class="hidden">
+        <h2>Gratulacje! Odblokowałaś nowego wirusa!</h2>
+    </div>
+
+    <script>
+        document.getElementById('tak').onclick = function() {
+            window.location.href = 'https://www.instagram.com'; 
+        };
+        
+        document.getElementById('nie').onclick = function() {
+            document.querySelector('.container').style.display = 'none';
+            document.getElementById('gratulacje').style.display = 'block';
+        };
+    </script>
+</body>
+</html>
